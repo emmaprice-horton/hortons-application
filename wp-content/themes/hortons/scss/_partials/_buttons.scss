@@ -1,0 +1,19 @@
+@mixin button__journey(
+    $padding: $gutter,
+    $background-color: $brand-base,
+    $border: 1px solid $white,
+    $color: $white
+){
+    padding: $padding;
+    background-color: $background-color;
+    color: $color;
+    
+    &:visited {
+        background-color: $background-color;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: darken($background-color, 10%);
+    }
+}

@@ -1,0 +1,33 @@
+/* ------------------------------------ 
+ * ------------------------------------ 
+ * Table of Contents
+ * 1. Base
+ * 2. Grid Settings
+*/
+
+// ------------------------------------ 
+// 1. Base
+// ------------------------------------ 
+$axolotl: #48654D;
+$envy: #8AA988;
+$periglacial-blue: #E4E6D8;
+$dove-gray: #666666;
+$white: #FFFFFF;
+
+$base-em: 16px;
+$brand-base: $axolotl;
+$brand-base-lighten: $envy;
+$brand-base-light: $periglacial-blue;
+
+$body-font-color: $dove-gray;
+$body-background-color: $white;
+$default-overlay-color: rgba(0, 0, 0, 0.8);
+
+// ------------------------------------ 
+// 2. Grid Settings
+// ------------------------------------ 
+$gutter: 0.9375rem;
+
+$item-gutter: $gutter / 3;
+$row-gutter: $gutter * 3.5;
+$container-gutter: $gutter /2;
