@@ -1,0 +1,66 @@
+@import url("https://use.typekit.net/owv6mdt.css");
+
+@font-face {
+    font-family: 'Journal';
+    src: url('hinted-Journal.eot');
+    src: local('Journal'),
+        url('hinted-Journal.eot?#iefix') format('embedded-opentype'),
+        url('hinted-Journal.woff2') format('woff2'),
+        url('hinted-Journal.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+$base-font-size: 1rem;
+$base-line-height: 1.25 * $base-font-size;
+
+
+@mixin visibility__hidden(
+    $padding: 0,
+    $margin: -1px,
+    $visibility: hidden,
+    $position: absolute,
+    $clip: rect(0, 0, 0, 0),
+    $font-size: 20px,
+    $width-height: 1px
+){
+    visibility: $visibility;
+    margin: $margin;
+    padding: $padding;
+    width: $width-height;
+    height: $width-height;
+    clip: $clip;
+    position: $position;
+}
+
+h2 {
+    font-family: Journal, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: $body-font-color;
+    font-size: 32px;
+    padding: $small-gutter 0;
+
+
+    @media (min-width: $screen__m) {
+        padding: $row-gutter 0;
+        font-size: 48px;
+        letter-spacing: 2.3px;
+    }
+}
+
+p,
+a,
+input {
+    font-family: brandon-grotesque, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 20px;
+
+    @media (min-width: $screen__m) {
+        font-size: 20px;
+    }
+}

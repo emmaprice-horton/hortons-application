@@ -1,0 +1,127 @@
+// ------------------------------------ 
+// Footer
+// ------------------------------------ 
+
+.footer {
+    background-color: $brand-base;
+
+    .footer-main,
+    .footer-newsletter {
+        color: $white;
+        padding: $small-gutter $gutter;
+
+        @media (min-width: $screen__ml) {
+            padding: $row-gutter;
+        }
+    }
+    
+    .footer-newsletter,
+    .footer-content {
+        max-width: 1240px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: $screen__ml) {
+            flex-direction: row;
+        }
+
+        .socialmedia {
+            padding: $gutter 0;
+            display: flex;
+
+            @media (min-width: $screen__ml) {
+                width: 30%;
+                padding: 0;
+            }
+
+            ul {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+
+                .facebook,
+                .instagram,
+                .twitter {
+                    display: inline-block;
+
+                    &:before {
+                        content: '';    
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        display: inline-block;
+
+                        @media (min-width: $screen__ml) {
+                            padding-right: $gutter;
+                        }
+                    }
+                }
+
+                span {
+                    @include visibility__hidden;
+                }
+
+                .facebook {
+                    &:before {
+                        background-image: url(images/fyp-facebook.png);
+                        width: 50px;
+                        height: 45px;
+                    }
+                }
+
+                .instagram {
+                    &:before {
+                        background-image: url(images/fyp-instagram.png);
+                        width: 50px;
+                        height: 45px;
+                    }
+                }
+
+                .twitter {
+                    &:before {
+                        background-image: url(images/fyp-twitter.png);
+                        width: 50px;
+                        height: 45px;
+                    }
+                }
+            }
+        }
+
+        .newsletter {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-direction: column;
+            padding: $gutter 0;
+
+            @media (min-width: $screen__ml) {
+                width: 70%;
+                flex-direction: row;
+                padding: 0;
+            }
+
+
+            p {
+                padding-bottom: $small-gutter;
+
+                @media (min-width: $screen__ml) {
+                    padding-right: $gutter;
+                    padding-bottom: 0;
+                }
+            }
+
+            button {
+                @include button__journey;
+            }
+        }
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-main {
+        background-color: $brand-base-lighten;
+        color: $white;
+    }
+}

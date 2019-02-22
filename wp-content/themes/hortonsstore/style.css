@@ -1,0 +1,575 @@
+/*
+Theme Name:   hortonsfarm
+Description:  hortons theme made from scratch
+Author:       Emma Price-Horton
+Version:      1.0.0
+Tags:         light, two-columns, right-sidebar, responsive-layout
+*/
+/* ------------------------------------ 
+ * ------------------------------------ 
+ * Table of Contents
+ * 1. Base
+ * 2. Colour Settings
+ * 3. Grid Settings
+ * 4. Breakpoints
+ * 5. Header Styles
+ * 6. Menu Styles
+ * 7. Basket Styles
+ * 8. Category Styles
+ * 9. Product Styles
+ * 10. Gallery Styles
+ * 11. Forms Styles
+ * 12. Footer Styles
+*/
+@import url("https://use.typekit.net/owv6mdt.css");
+/* line 1, scss/_atoms/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 22, scss/_atoms/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 27, scss/_atoms/_reset.scss */
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* line 32, scss/_atoms/_reset.scss */
+ol,
+ul {
+  list-style: none;
+}
+
+/* line 37, scss/_atoms/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 41, scss/_atoms/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 47, scss/_atoms/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 52, scss/_atoms/_reset.scss */
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* line 60, scss/_atoms/_reset.scss */
+.page-content {
+  padding: 0 0.9375rem;
+}
+@media (min-width: 768px) {
+  /* line 60, scss/_atoms/_reset.scss */
+  .page-content {
+    padding: 0 3.28125rem;
+  }
+}
+
+@font-face {
+  font-family: 'Journal';
+  src: url("hinted-Journal.eot");
+  src: local("Journal"), url("hinted-Journal.eot?#iefix") format("embedded-opentype"), url("hinted-Journal.woff2") format("woff2"), url("hinted-Journal.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 37, scss/_atoms/_typography.scss */
+h2 {
+  font-family: Journal, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #666666;
+  font-size: 32px;
+  padding: 0.46875rem 0;
+}
+@media (min-width: 768px) {
+  /* line 37, scss/_atoms/_typography.scss */
+  h2 {
+    padding: 3.28125rem 0;
+    font-size: 48px;
+    letter-spacing: 2.3px;
+  }
+}
+
+/* line 53, scss/_atoms/_typography.scss */
+p,
+a,
+input {
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  letter-spacing: 2px;
+  line-height: 20px;
+}
+@media (min-width: 768px) {
+  /* line 53, scss/_atoms/_typography.scss */
+  p,
+  a,
+  input {
+    font-size: 20px;
+  }
+}
+
+/* line 5, scss/_organisms/_header.scss */
+.header {
+  background-color: #48654D;
+  color: #FFFFFF;
+}
+/* line 9, scss/_organisms/_header.scss */
+.header .trustbuilder {
+  display: none;
+  background-color: #8AA988;
+  padding: 0.9375rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  /* line 9, scss/_organisms/_header.scss */
+  .header .trustbuilder {
+    display: block;
+  }
+}
+/* line 20, scss/_organisms/_header.scss */
+.header .main-header {
+  display: flex;
+  text-align: center;
+  padding: 0.46875rem 0.9375rem;
+  align-items: center;
+  justify-content: space-around;
+}
+@media (min-width: 768px) {
+  /* line 20, scss/_organisms/_header.scss */
+  .header .main-header {
+    padding: 0.9375rem 3.28125rem;
+  }
+}
+/* line 31, scss/_organisms/_header.scss */
+.header .main-header .open-search {
+  background-image: url(images/fyp-search-open.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-start;
+  width: 30px;
+  height: 34px;
+}
+@media (min-width: 768px) {
+  /* line 31, scss/_organisms/_header.scss */
+  .header .main-header .open-search {
+    width: 30px;
+    height: 34px;
+  }
+}
+/* line 45, scss/_organisms/_header.scss */
+.header .main-header .open-search span {
+  visibility: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+/* line 50, scss/_organisms/_header.scss */
+.header .main-header .search {
+  flex: 1 0 20%;
+  box-sizing: border-box;
+}
+/* line 54, scss/_organisms/_header.scss */
+.header .main-header .search form {
+  display: none;
+}
+/* line 57, scss/_organisms/_header.scss */
+.header .main-header .search form div {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+/* line 63, scss/_organisms/_header.scss */
+.header .main-header .search form div label {
+  visibility: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+/* line 67, scss/_organisms/_header.scss */
+.header .main-header .search form div .search-box {
+  height: 40px;
+  background-color: #8AA988;
+  border: 0;
+  color: #FFFFFF;
+  width: 100%;
+  padding: 0.46875rem;
+  font-size: 20px;
+}
+/* line 77, scss/_organisms/_header.scss */
+.header .main-header .search form div .actions {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: auto;
+}
+/* line 83, scss/_organisms/_header.scss */
+.header .main-header .search form div .actions button {
+  display: inline-block;
+  border: 0;
+  padding: 0;
+  content: ' ';
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/* line 92, scss/_organisms/_header.scss */
+.header .main-header .search form div .actions .submit-button {
+  background-image: url(images/fyp-search.jpg);
+  width: 30px;
+  height: 34px;
+}
+/* line 98, scss/_organisms/_header.scss */
+.header .main-header .search form div .actions .submit-close {
+  position: absolute;
+  background-image: url(images/fyp-close.jpg);
+  width: 25px;
+  height: 25px;
+  bottom: 10px;
+  left: 50px;
+}
+/* line 111, scss/_organisms/_header.scss */
+.header .main-header .logo {
+  flex: 1 0 60%;
+}
+/* line 115, scss/_organisms/_header.scss */
+.header .main-header .logo .custom-logo-link img {
+  max-width: 300px;
+  height: auto;
+}
+/* line 122, scss/_organisms/_header.scss */
+.header .main-header .minibasket {
+  flex: 1 0 20%;
+  display: flex;
+  justify-content: flex-end;
+}
+/* line 127, scss/_organisms/_header.scss */
+.header .main-header .minibasket:before {
+  content: '';
+  background-image: url(images/fyp-barrow.jpg);
+  display: block;
+  width: 53px;
+  height: 34px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  /* line 127, scss/_organisms/_header.scss */
+  .header .main-header .minibasket:before {
+    width: 80px;
+    height: 46px;
+  }
+}
+/* line 145, scss/_organisms/_header.scss */
+.header .navigation {
+  background-color: #E4E6D8;
+  padding: 0.9375rem;
+}
+/* line 149, scss/_organisms/_header.scss */
+.header .navigation .menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  max-width: 800px;
+  margin: 0 auto;
+}
+/* line 156, scss/_organisms/_header.scss */
+.header .navigation .menu a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #666666;
+}
+/* line 161, scss/_organisms/_header.scss */
+.header .navigation .menu a:hover {
+  color: #48654D;
+}
+
+/* line 5, scss/_organisms/_footer.scss */
+.footer {
+  background-color: #48654D;
+}
+/* line 8, scss/_organisms/_footer.scss */
+.footer .footer-main,
+.footer .footer-newsletter {
+  color: #FFFFFF;
+  padding: 0.46875rem 0.9375rem;
+}
+@media (min-width: 992px) {
+  /* line 8, scss/_organisms/_footer.scss */
+  .footer .footer-main,
+  .footer .footer-newsletter {
+    padding: 3.28125rem;
+  }
+}
+/* line 18, scss/_organisms/_footer.scss */
+.footer .footer-newsletter,
+.footer .footer-content {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 992px) {
+  /* line 18, scss/_organisms/_footer.scss */
+  .footer .footer-newsletter,
+  .footer .footer-content {
+    flex-direction: row;
+  }
+}
+/* line 29, scss/_organisms/_footer.scss */
+.footer .footer-newsletter .socialmedia,
+.footer .footer-content .socialmedia {
+  padding: 0.9375rem 0;
+  display: flex;
+}
+@media (min-width: 992px) {
+  /* line 29, scss/_organisms/_footer.scss */
+  .footer .footer-newsletter .socialmedia,
+  .footer .footer-content .socialmedia {
+    width: 30%;
+    padding: 0;
+  }
+}
+/* line 38, scss/_organisms/_footer.scss */
+.footer .footer-newsletter .socialmedia ul,
+.footer .footer-content .socialmedia ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+/* line 43, scss/_organisms/_footer.scss */
+.footer .footer-newsletter .socialmedia ul .facebook,
+.footer .footer-newsletter .socialmedia ul .instagram,
+.footer .footer-newsletter .socialmedia ul .twitter,
+.footer .footer-content .socialmedia ul .facebook,
+.footer .footer-content .socialmedia ul .instagram,
+.footer .footer-content .socialmedia ul .twitter {
+  display: inline-block;
+}
+/* line 48, scss/_organisms/_footer.scss */
+.footer .footer-newsletter .socialmedia ul .facebook:before,
+.footer .footer-newsletter .socialmedia ul .instagram:before,
+.footer .footer-newsletter .socialmedia ul .twitter:before,
+.footer .footer-content .socialmedia ul .facebook:before,
+.footer .footer-content .socialmedia ul .instagram:before,
+.footer .footer-content .socialmedia ul .twitter:before {
+  content: '';
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+@media (min-width: 992px) {
+  /* line 48, scss/_organisms/_footer.scss */
+  .footer .footer-newsletter .socialmedia ul .facebook:before,
+  .footer .footer-newsletter .socialmedia ul .instagram:before,
+  .footer .footer-newsletter .socialmedia ul .twitter:before,
+  .footer .footer-content .socialmedia ul .facebook:before,
+  .footer .footer-content .socialmedia ul .instagram:before,
+  .footer .footer-content .socialmedia ul .twitter:before {
+    padding-right: 0.9375rem;
+  }
+}
+/* line 60, scss/_organisms/_footer.scss */
+.footer .footer-newsletter .socialmedia ul span,
+.footer .footer-content .socialmedia ul span {
+  visibility: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+/* line 65, scss/_organisms/_footer.scss */
+.footer .footer-newsletter .socialmedia ul .facebook:before,
+.footer .footer-content .socialmedia ul .facebook:before {
+  background-image: url(images/fyp-facebook.png);
+  width: 50px;
+  height: 45px;
+}
+/* line 73, scss/_organisms/_footer.scss */
+.footer .footer-newsletter .socialmedia ul .instagram:before,
+.footer .footer-content .socialmedia ul .instagram:before {
+  background-image: url(images/fyp-instagram.png);
+  width: 50px;
+  height: 45px;
+}
+/* line 81, scss/_organisms/_footer.scss */
+.footer .footer-newsletter .socialmedia ul .twitter:before,
+.footer .footer-content .socialmedia ul .twitter:before {
+  background-image: url(images/fyp-twitter.png);
+  width: 50px;
+  height: 45px;
+}
+/* line 90, scss/_organisms/_footer.scss */
+.footer .footer-newsletter .newsletter,
+.footer .footer-content .newsletter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding: 0.9375rem 0;
+}
+@media (min-width: 992px) {
+  /* line 90, scss/_organisms/_footer.scss */
+  .footer .footer-newsletter .newsletter,
+  .footer .footer-content .newsletter {
+    width: 70%;
+    flex-direction: row;
+    padding: 0;
+  }
+}
+/* line 104, scss/_organisms/_footer.scss */
+.footer .footer-newsletter .newsletter p,
+.footer .footer-content .newsletter p {
+  padding-bottom: 0.46875rem;
+}
+@media (min-width: 992px) {
+  /* line 104, scss/_organisms/_footer.scss */
+  .footer .footer-newsletter .newsletter p,
+  .footer .footer-content .newsletter p {
+    padding-right: 0.9375rem;
+    padding-bottom: 0;
+  }
+}
+/* line 113, scss/_organisms/_footer.scss */
+.footer .footer-newsletter .newsletter button,
+.footer .footer-content .newsletter button {
+  padding: 0.46875rem;
+  background-color: #48654D;
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+  font-size: 20px;
+  width: 225px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+/* line 20, scss/_atoms/_buttons.scss */
+.footer .footer-newsletter .newsletter button:visited,
+.footer .footer-content .newsletter button:visited {
+  background-color: #48654D;
+}
+/* line 24, scss/_atoms/_buttons.scss */
+.footer .footer-newsletter .newsletter button:hover, .footer .footer-newsletter .newsletter button:focus,
+.footer .footer-content .newsletter button:hover,
+.footer .footer-content .newsletter button:focus {
+  background-color: #3d5642;
+}
+/* line 119, scss/_organisms/_footer.scss */
+.footer .footer-content {
+  flex-direction: column;
+}
+/* line 123, scss/_organisms/_footer.scss */
+.footer .footer-main {
+  background-color: #8AA988;
+  color: #FFFFFF;
+}
+
+/* line 1, scss/_pages/_home.scss */
+.tagline {
+  text-align: center;
+}
+
+/* line 5, scss/_pages/_home.scss */
+.image-grid {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 480px) {
+  /* line 5, scss/_pages/_home.scss */
+  .image-grid {
+    flex-direction: row;
+  }
+}
+/* line 13, scss/_pages/_home.scss */
+.image-grid img {
+  margin-bottom: 0.46875rem;
+}
+/* line 17, scss/_pages/_home.scss */
+.image-grid .col-1 {
+  min-width: 0;
+}
+@media (min-width: 480px) {
+  /* line 17, scss/_pages/_home.scss */
+  .image-grid .col-1 {
+    margin-right: 0.46875rem;
+    flex: 1 auto calc(55% - 0.46875rem);
+  }
+}
+@media (min-width: 992px) {
+  /* line 17, scss/_pages/_home.scss */
+  .image-grid .col-1 {
+    margin-right: 0.9375rem;
+    flex: 1 auto calc(35% - 0.9375rem);
+  }
+}
+/* line 31, scss/_pages/_home.scss */
+.image-grid .col-2 {
+  min-width: 0;
+}
+@media (min-width: 480px) {
+  /* line 31, scss/_pages/_home.scss */
+  .image-grid .col-2 {
+    margin-right: 0.46875rem;
+    flex: 1 auto calc(45% - 0.9375rem);
+  }
+}
+@media (min-width: 992px) {
+  /* line 31, scss/_pages/_home.scss */
+  .image-grid .col-2 {
+    margin-right: 0.9375rem;
+    flex: 1 auto calc(30% - 0.9375rem);
+  }
+}
+/* line 45, scss/_pages/_home.scss */
+.image-grid .col-3 {
+  min-width: 0;
+  display: none;
+}
+@media (min-width: 992px) {
+  /* line 45, scss/_pages/_home.scss */
+  .image-grid .col-3 {
+    display: block;
+    flex: 1 auto calc(35% - 0.9375rem);
+  }
+}

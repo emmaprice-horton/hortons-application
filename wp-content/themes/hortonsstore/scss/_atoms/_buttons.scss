@@ -1,0 +1,28 @@
+@mixin button__journey(
+    $padding: $small-gutter,
+    $background-color: $brand-base,
+    $border: 2px solid $white,
+    $color: $white,
+    $font-size: 20px,
+    $width: 225px,
+    $transform-upper: uppercase,
+    $spacing: 1.5px
+){
+    padding: $padding;
+    background-color: $background-color;
+    color: $color;
+    border: $border;
+    font-size: $font-size;
+    width: $width;
+    text-transform: $transform-upper;
+    letter-spacing: $spacing;
+    
+    &:visited {
+        background-color: $background-color;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: darken($background-color, 5%);
+    }
+}

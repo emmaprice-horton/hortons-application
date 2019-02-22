@@ -1,0 +1,109 @@
+/* ------------------------------------ 
+ * ------------------------------------ 
+ * Table of Contents
+ * 1. Base
+ * 2. Colour Settings
+ * 3. Grid Settings
+ * 4. Breakpoints
+ * 5. Header Styles
+ * 6. Menu Styles
+ * 7. Basket Styles
+ * 8. Category Styles
+ * 9. Product Styles
+ * 10. Gallery Styles
+ * 11. Forms Styles
+ * 12. Footer Styles
+*/
+
+// ------------------------------------ 
+// 1. Base
+// ------------------------------------ 
+$axolotl: #48654D;
+$envy: #8AA988;
+$periglacial-blue: #E4E6D8;
+$dove-gray: #666666;
+$white: #FFFFFF;
+
+$base-em: 16px;
+$brand-base: $axolotl;
+$brand-base-lighten: $envy;
+$brand-base-light: $periglacial-blue;
+
+
+// ------------------------------------ 
+// 2. Colour Settings
+// ------------------------------------ 
+$body-background-color: $white;
+$body-font-color: $dove-gray;
+
+// For use on full width container that do not have a white background
+$body-background-color: $periglacial-blue;
+
+$popup-background-color: $white;
+
+$trust-builder-background: $brand-base-lighten;
+$trust-builder-color: $white;
+
+$default-overlay-color: rgba(0, 0, 0, 0.8);
+$default-focus-color: $brand-base;
+
+// ------------------------------------ 
+// 3. Grid Settings
+// ------------------------------------ 
+$gutter: 0.9375rem;
+$item-gutter: $gutter / 3;
+$row-gutter: $gutter * 3.5;
+$small-gutter: $gutter / 2;
+
+// ------------------------------------ 
+// 4. Breakpoints
+// ------------------------------------ 
+$screen__xxs: 350px !default;
+$screen__xs: 480px !default;
+$screen__s: 640px !default;
+$screen__m: 768px !default;
+$screen__ml: 992px !default;
+$screen__l: 1024px !default;
+$screen__ll: 1280px !default;
+$screen__xl: 1440px !default;
+
+// ------------------------------------ 
+// 5. Header Styles
+// ------------------------------------ 
+$header-background-color: $brand-base;
+$header-color: $white;
+
+$logo-max-width: 300px;
+$mobile-logo-max-width: 200px;
+
+// ------------------------------------ 
+// 6. Menu Styles
+// ------------------------------------ 
+$navigation-background-color: $brand-base-light;
+$navigation-item-color: $body-font-color;
+$navigation-item-hover: $brand-base;
+
+
+// ------------------------------------ 
+// 7. Basket
+// ------------------------------------ 
+
+// ------------------------------------ 
+// 8. Category Styles
+// ------------------------------------ 
+
+// ------------------------------------ 
+// 9. Product Styles
+// ------------------------------------ 
+
+// ------------------------------------ 
+// 10. Gallery Styles
+// ------------------------------------ 
+
+// ------------------------------------ 
+// 11. Forms Styles
+// ------------------------------------ 
+
+// ------------------------------------ 
+// 12. Footer Styles
+// ------------------------------------ 

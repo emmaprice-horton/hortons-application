@@ -1,0 +1,167 @@
+// ------------------------------------ 
+// Header
+// ------------------------------------ 
+
+.header {
+    background-color: $header-background-color;
+    color: $header-color;
+
+    .trustbuilder {
+        display: none;                                                    
+        background-color: $trust-builder-background;
+        padding: $gutter;
+        text-align: center;
+
+        @media (min-width: $screen__m) {
+            display: block;
+        }
+    }
+
+    .main-header {
+        display: flex;
+        text-align: center;
+        padding: $small-gutter $gutter;
+        align-items: center;
+        justify-content: space-around;
+
+        @media (min-width: $screen__m) {
+            padding: $gutter $row-gutter;
+        }
+
+        .open-search {
+            background-image: url(images/fyp-search-open.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: flex-start;
+            width: 30px;
+            height: 34px;
+
+            @media (min-width: $screen__m) {
+                width: 30px;
+                height: 34px;
+            }
+
+            span {
+                @include visibility__hidden;
+            }
+        }
+
+        .search {
+            flex: 1 0 20%;
+            box-sizing: border-box;
+
+            form {
+                display: none;
+
+                div {
+                    width: 100%;
+                    padding: 0;
+                    margin: 0;
+                    position: relative;
+
+                    label {
+                        @include visibility__hidden;
+                    }
+        
+                    .search-box {
+                        height: 40px;
+                        background-color: #8AA988;
+                        border: 0;
+                        color: $white;
+                        width: 100%;
+                        padding: $small-gutter;
+                        font-size: 20px;
+                    }
+        
+                    .actions {
+                        position: absolute;
+                        top: 10px;
+                        right: 0;
+                        width: auto;
+
+                        button {
+                            display: inline-block;
+                            border: 0;
+                            padding: 0;
+                            content: ' ';
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                        }
+
+                        .submit-button {
+                            background-image: url(images/fyp-search.jpg);
+                            width: 30px;
+                            height: 34px;
+                        }
+
+                        .submit-close {
+                            position: absolute;
+                            background-image: url(images/fyp-close.jpg);
+                            width: 25px;
+                            height: 25px;
+                            bottom: 10px;
+                            left: 50px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .logo {
+            flex: 1 0 60%;
+
+            .custom-logo-link {
+                img {
+                    max-width: $logo-max-width;
+                    height: auto;
+                }
+            }
+        }
+
+        .minibasket {
+            flex: 1 0 20%;
+            display: flex;
+            justify-content: flex-end;
+
+            &:before {
+                content: '';
+                background-image: url(images/fyp-barrow.jpg);
+                display: block;
+                width: 53px;
+                height: 34px;
+                background-size: contain;
+                background-repeat: no-repeat;
+
+                @media (min-width: $screen__m) {
+                    width: 80px;
+                    height: 46px; 
+                }
+            }
+        }
+    }
+
+    // Header Navigation
+    .navigation {
+        background-color: $navigation-background-color;
+        padding: $gutter;
+
+        .menu {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            max-width: 800px;
+            margin: 0 auto;
+            
+            a {
+                text-decoration: none;
+                text-transform: uppercase;
+                color: $navigation-item-color;
+
+                &:hover {
+                    color: $navigation-item-hover;
+                }
+            }
+        }
+    }
+}

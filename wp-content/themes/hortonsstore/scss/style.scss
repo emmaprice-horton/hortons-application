@@ -1,0 +1,26 @@
+/*
+Theme Name:   hortonsfarm
+Description:  hortons theme made from scratch
+Author:       Emma Price-Horton
+Version:      1.0.0
+Tags:         light, two-columns, right-sidebar, responsive-layout
+*/
+
+@import "_variables";
+
+// Atoms
+@import "_atoms/reset";
+@import "_atoms/typography";
+@import "_atoms/buttons";
+
+// Molecules
+
+// Organisms
+@import "_organisms/header";
+@import "_organisms/footer";
+
+// Layout
+
+
+// Pages
+@import "_pages/home";
