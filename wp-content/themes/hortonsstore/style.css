@@ -98,13 +98,12 @@ img {
 }
 
 @font-face {
-  font-family: 'Journal';
-  src: url("hinted-Journal.eot");
-  src: local("Journal"), url("hinted-Journal.eot?#iefix") format("embedded-opentype"), url("hinted-Journal.woff2") format("woff2"), url("hinted-Journal.woff") format("woff");
+  font-family: "Journal";
+  src: url("../fonts/Journal.woff") format("woff"), url("../fonts/Journal.woff2") format("woff2"), url("../fonts/Journal.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-/* line 37, scss/_atoms/_typography.scss */
+/* line 33, scss/_atoms/_typography.scss */
 h2 {
   font-family: Journal, sans-serif;
   font-weight: 400;
@@ -114,7 +113,7 @@ h2 {
   padding: 0.46875rem 0;
 }
 @media (min-width: 768px) {
-  /* line 37, scss/_atoms/_typography.scss */
+  /* line 33, scss/_atoms/_typography.scss */
   h2 {
     padding: 3.28125rem 0;
     font-size: 48px;
@@ -122,7 +121,7 @@ h2 {
   }
 }
 
-/* line 53, scss/_atoms/_typography.scss */
+/* line 49, scss/_atoms/_typography.scss */
 p,
 a,
 input {
@@ -134,7 +133,7 @@ input {
   line-height: 20px;
 }
 @media (min-width: 768px) {
-  /* line 53, scss/_atoms/_typography.scss */
+  /* line 49, scss/_atoms/_typography.scss */
   p,
   a,
   input {

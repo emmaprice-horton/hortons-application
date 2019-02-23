@@ -1,20 +1,16 @@
 @import url("https://use.typekit.net/owv6mdt.css");
 
 @font-face {
-    font-family: 'Journal';
-    src: url('hinted-Journal.eot');
-    src: local('Journal'),
-        url('hinted-Journal.eot?#iefix') format('embedded-opentype'),
-        url('hinted-Journal.woff2') format('woff2'),
-        url('hinted-Journal.woff') format('woff');
+    font-family: "Journal";
+    src: url('../fonts/Journal.woff') format('woff'),
+         url('../fonts/Journal.woff2') format('woff2'),
+         url('../fonts/Journal.ttf') format('truetype');
     font-weight: normal;
-    font-style: normal;
+    font-style: normal; 
 }
-
 
 $base-font-size: 1rem;
 $base-line-height: 1.25 * $base-font-size;
-
 
 @mixin visibility__hidden(
     $padding: 0,
