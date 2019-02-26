@@ -1,3 +1,8 @@
 <?php get_header(); ?>
+
     <?php woocommerce_content(); ?>
-<?php get_footer(); ?>
+
+<?php
+do_action( 'storefront_sidebar' );
+get_footer();
+?>

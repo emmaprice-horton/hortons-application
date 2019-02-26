@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width">
     <title><?php single_post_title(); ?></title>
     <?php wp_head(); ?>
 </head>
@@ -18,7 +17,7 @@
 
         <div class="main-header">
             <div class="search">
-                <a class="open-search" href="/"><span>Search</span></a>
+                <div class="open-search"><span>Search</span></div>
                 <?php get_search_form(); ?>
             </div>
 
@@ -26,7 +25,10 @@
                 <?php if ( function_exists( 'the_custom_logo' ) ) { the_custom_logo(); } ?>
             </div>
 
-            <a class="minibasket" href="wordpress/cart"></a>
+            <a class="minibasket" href="/basket">
+            <img alt="Hortons Mini-Basket" src="<?php echo get_bloginfo('template_url') ?>/images/barrow.jpg"/>
+            <span>Basket</span>
+            </a>
         </div>
 
         <div class="navigation">

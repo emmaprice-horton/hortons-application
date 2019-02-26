@@ -1,17 +1,21 @@
 <?php get_header(); ?>
-<div id="main">
 
+<h1>test</h1>
+<?php if ( is_active_sidebar( 'custom-side-bar' ) ) : ?>
+    <?php dynamic_sidebar( 'custom-side-bar' ); ?>
+<?php endif; ?>
+
+<div id="main">
 <?php //start the loop
 if ( have_posts() ) : while ( have_posts() ) : the_post(); 
 ?>
-
     <div class="post-content">
             <h2><?php the_title(); ?></h2>
             <?php if ( has_post_thumbnail() ) {
                 the_post_thumbnail();
                 } ?>
             <?php the_content(); ?>
-            <small><?phpthe_time('F j, Y'); ?></small>
+            <small><?php the_time('F j, Y'); ?></small>
     </div>
     <?php endwhile; //end the loop
     ?>
